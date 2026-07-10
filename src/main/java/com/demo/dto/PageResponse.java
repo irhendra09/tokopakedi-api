@@ -1,0 +1,12 @@
+package com.demo.dto;
+
+import java.util.List;
+
+public record PageResponse<T>(
+        List<T> data,
+        Long totalData,
+        Integer totalPage,
+        Integer page,
+        Integer size
+) {
+}
