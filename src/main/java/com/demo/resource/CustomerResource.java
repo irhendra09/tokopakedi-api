@@ -51,6 +51,7 @@ public class CustomerResource {
 
     @DELETE
     @Path("/{id}")
+    @Transactional
     public Response deleteById(@PathParam("id") Integer id){
         boolean isDeleted = Customer.deleteById(id);
         if (!isDeleted) throw new NotFoundException("Customers not found");

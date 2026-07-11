@@ -19,8 +19,8 @@ import org.hibernate.validator.constraints.pl.NIP;
 public class Product{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String name;
     private Double price;
-    private Double stock;
+    private Integer stock;
 }
